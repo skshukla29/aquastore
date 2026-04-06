@@ -22,7 +22,7 @@ export function Leaderboard({ rows, silentObserver }: LeaderboardProps) {
             className={clsx(
               "grid grid-cols-[42px_1fr_72px_86px] items-center gap-3 rounded-2xl px-3 py-3",
               row.rank === 1
-                ? "bg-gradient-to-r from-emerald-100 via-cyan-100 to-sky-100"
+                ? "bg-linear-to-r from-emerald-100 via-cyan-100 to-sky-100"
                 : "bg-slate-50",
             )}
           >

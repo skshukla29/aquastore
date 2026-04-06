@@ -24,7 +24,7 @@ export function DroughtChallengeCard({ challenge }: DroughtChallengeProps) {
         </p>
         <div className="mt-4 h-3 w-full overflow-hidden rounded-full bg-amber-100">
           <div
-            className="h-full rounded-full bg-gradient-to-r from-amber-500 to-emerald-500"
+            className="h-full rounded-full bg-linear-to-r from-amber-500 to-emerald-500"
             style={{ width: `${progress}%` }}
           />
         </div>
