@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AquaScore Prototype
 
-## Getting Started
+AquaScore is a Vercel-only Next.js prototype website with a clean, responsive marketing site, working auth flows, a contact form, serverless API routes, and localStorage-backed dashboard CRUD.
 
-First, run the development server:
+## What is included
+
+- Home page with clear product introduction
+- About page
+- Contact page with working validation and API response
+- Dashboard page with real localStorage CRUD and analytics widgets
+- Responsive navbar and footer
+- 404 page
+- Next.js serverless routes for login, signup, data, and contact
+- Session state stored in localStorage
+- Mock data and serverless responses for fast prototyping
+
+## Pages
+
+- `/` Home
+- `/about` About
+- `/contact` Contact
+- `/dashboard` Dashboard
+
+## API routes
+
+- `POST /api/login`
+- `POST /api/signup`
+- `GET /api/data`
+- `POST /api/contact`
+
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build for production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Prototype behavior
 
-To learn more about Next.js, take a look at the following resources:
+- Login and signup use localStorage sessions.
+- The contact form validates input and returns a server response.
+- The dashboard includes a real CRUD task board stored in localStorage.
+- API routes run as serverless functions, so the app can deploy to Vercel without a separate backend.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tech stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Next.js App Router
+- TypeScript
+- Tailwind CSS
+- Serverless route handlers
+- LocalStorage for session and CRUD state
+- Zod validation
 
-## Deploy on Vercel
+## Notes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Demo login credentials are seeded in the app routes for quick testing.
+- The project is intentionally simplified so it can run as a self-contained prototype on Vercel.
